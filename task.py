@@ -17,7 +17,7 @@ class Task:
         self.task = task
         self.task_id = str(Task.num_tasks_generated)
         self.done = done
-        self.due_date = "{}/{}/{}".format(dt.month, dt.day, dt.year) if dt else None
+        self.due_date = dt.strftime("%m/%d/%Y") if dt else None
         self.due_time = str(dt.time()) if dt else None
         self.recurrence = recurrence
         self.priority = priority

@@ -27,7 +27,6 @@ class Database:
 
     def tick_task_id(self, task_id, done):
         if isinstance(task_id, str) and 0 < int(task_id) <= max([int(key) for key in self.database.keys()]):
-            print("!")
             self.database[task_id]["done"] = done
             return True
         return False
